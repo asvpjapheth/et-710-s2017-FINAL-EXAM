@@ -1,0 +1,193 @@
+<!doctype html>
+<html ng-app="todoApp" class="no-js" lang="en" dir="ltr">
+  <head>
+  <script src="c:\Sites\et-710-final\final\angular-1.6.4\angular-1.6.4\angular.min.js"></script>
+  <script src="js/todo.js"></script>
+    <link rel="stylesheet" href="css/todo.css">
+    <link rel="shortcut icon" href="c:\Sites\et-710-s2017\images\favicon 22.ico" type="image/x-icon">
+    <link rel="icon" href="c:\Sites\et-710-s2017\images\favicon 22.ico" type="image/x-icon">
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Japheth's BTECH </title>
+    <link rel="stylesheet" href="css/foundation.css">
+    <link rel="stylesheet" href="css/app.css">
+    <link rel="stylesheet" href="css/nav.css">
+    <link rel="stylesheet" href="css/hero.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/footer.css">
+  </head>
+  <body>
+    <!-- Begin Angular Name-->
+    <div>
+      <label>Name:</label>
+      <input type="text" ng-model="yourName" placeholder="Enter a name here">
+      <hr>
+      <h1>Hello {{yourName}}!</h1>
+    </div>
+
+    <!-- End Angular Name-->
+
+    <!-- Begin Angular TODOLIST-->
+    <body>
+      <h2>To do</h2>
+      <div ng-controller="TodoListController as todoList">
+        <span> {{todoList.addTodo()}} of {{todoList.todos.length}} remaining</span>
+         <a href="" ng-click="todoList.archive()">archive</a>
+        <ul class="unstyled">
+          <li ng-repeat="todo in todoList.todos">
+            <label class="checkbox">
+              <input type="checkbox" ng-model="todo.done">
+              <span class="done-{{todo.done}}">{{todo.text}}</span>
+            </label>
+          </li>
+        </ul>
+        <form ng-submit="todoList.addTodo()">
+          <input type="text" ng-model="todoList.todoText."  size="30"
+          placeholder="add new todo here">
+          <input class="btn-primary" type="submit" value="add">
+        </form>
+      </div>
+    </body>
+    <!-- End Angular TODOLIST-->
+
+    <!-- Begin Nav-->
+    <!-- Small Navigation -->
+    <div class="title-bar" data-responsive-toggle="nav-menu" data-hide-for="medium">
+      <a class="logo-small show-for-small-only" href="#"><img src="http://placehold.it/50x50?text=LOGO" /></a>
+      <button class="menu-icon" type="button" data-toggle></button>
+      <div class="title-bar-title">Menu</div>
+    </div>
+
+    <!-- Medium-Up Navigation -->
+    <nav class="top-bar" id="nav-menu">
+
+      <div class="logo-wrapper hide-for-small-only">
+        <div class="logo">
+          <img src="c:\Sites\et-710-s2017\images\BTECH_CMYK (untouched)-50x50.png">
+        </div>
+        <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+      </head>
+      <body bgcolor="#FFFFFF" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+      </div>
+
+      <!-- Left Nav Section -->
+      <div class="top-bar-left">
+        <ul class="vertical medium-horizontal menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="about/site.html">About</a></li>
+        </ul>
+      </div>
+
+      <!-- Right Nav Section -->
+      <div class="top-bar-right">
+        <ul class="vertical medium-horizontal menu" data-responsive-menu="drilldown medium-dropdown">
+          <li class="has-submenu">
+            <a href="http://www.btechnyc.org/">Student Activities</a>
+            <ul class="submenu menu vertical" data-submenu>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/btech_videos">BTECH Videos</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/btech_end_of_year_bash_2016">BTECH End of Year Bash 2016</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/ge_skills_labsimulation_at_sap">GE Skills lab at SAP</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/network_groups">Network Groups</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/life_at_btech">Life at BTECH</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/science_class">Science Class</a></li>
+              <li><a href="http://business-technology-early-college-high-school.echalksites.com/thanksgiving_fit_and_feast_2015">Thanksgiving fit and feast 2015</a></li>
+            </ul>
+          </li>
+      </div>
+
+    </nav>
+    <!-- End Nav-->
+
+    <!-- Begin Hero-->
+
+    <div class="row main-links">
+      <div class="small-12 medium-4 columns">
+        <img src="c:\Sites\et-710-s2017\images\DSC_6372.png">
+      </div>
+      <div class="small-12 medium-4 columns">
+        <img src="c:\Sites\et-710-s2017\images\DSC_6972.png">
+      </div>
+      <div class="small-12 medium-4 columns">
+        <img src="c:\Sites\et-710-s2017\images\DSC_6980.png">
+      </div>
+    </div>
+
+    <link href="https://s3-us-west-2.amazonaws.com/s.cdpn.io/6035/icomoon-uikit-feb.css" rel="stylesheet">
+
+    <div class="row">
+      <div class="small-12 columns">
+
+
+
+        <article class="post">
+          <a href="#">
+            <img src="http://nycptechschools.org/web/sites/default/files/schools_btech.gif" />
+          </a>
+          <div class="content">
+            <h2><a href="#">Business Technology Early College Highschool</a></h2>
+            <p>In partnership with <strong>SAP & QCC</strong> </p>
+
+        </article>
+
+      </div>
+    </div>
+    <!-- End Hero-->
+
+    <!-- Begin Content-->
+    <div class="row">
+      <h2>   Student Stories </h2>
+      <div class="medium-6 large-4 columns">
+        <article class="article-card">
+          <div class="card-content">
+            <h4>BTECH gave me oppurtinities that is unique to other schools...</h4>
+            <p>As a student in BTECH, you are held on a higher standard, academically and behaviorally, compared to students of other highschools.Why? Because BTECH students tackle both highschool and college classes at the same time. Due to the program BTECH runs, students are only successful with it if they are mature and responsible enough, otherwise you will fall behind on your work. </p>
+            <p class="post-author">By John Doe</p>
+
+
+          </div>
+        </article>
+      </div>
+      <div class="medium-6 large-4 columns">
+        <article class="article-card">
+          <div class="card-content">
+            <div class="card-content">
+            <h4>BTECH is the place for learning</h4>
+            <p>In our school, every  student is encouraged to learn in their own ways. Teachers are often using different methods to adapt the different ways students learn, which is what makes BTECH very successful in terms of student learning. </p>
+            <p class="post-author">By Jack Fry</p>
+          </div>
+        </article>
+      </div>
+      <div class="medium-6 large-4 end columns">
+        <article class="article-card">
+          <div class="card-content">
+          <h4>Opportunites are one of a kind...</h4>
+          <p>Because of BTECH's partnership with SAP and QCC, they run a 6-year program, by which at the end, you will have a highschool diploma, associate's degree, and interships. Not many students who come out of college are already equipped with the on the job training that in demand jobs required. With BTECH, the school and its partners train every student to graduate on time with a college degree and job experience, giving them edge when they apply for a job.  </p>
+          <p class="post-author">By Jane Jones </p>
+          </div>
+        </article>
+      </div>
+    </div>
+    <!-- End Content-->
+
+    <!-- Begin Footer-->
+    <footer class="footer">
+      <div class="row">
+        <div class="small-12 columns">
+          <p class="slogan">In partnership with SAP and QCC</p>
+          <p class="links">
+            <a href="#">Home</a>
+            <a href="about/site.html">About</a>
+            <a href="contact/site.html">Contact</a>
+          </p>
+          <p class="copywrite">Created by Japheth Jagolina © 2017</p>
+        </div>
+      </div>
+    </footer>
+    <!-- End Footer-->
+    <script src="js/vendor/jquery.js"></script>
+    <script src="js/vendor/what-input.js"></script>
+    <script src="js/vendor/foundation.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
